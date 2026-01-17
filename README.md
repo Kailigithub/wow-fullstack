@@ -1,7 +1,9 @@
-# wow-全栈
+# wow-fullstack【🧪 Beta公测版】
+
+【🧪 Beta公测版本提示：教程主体已完成，正在优化细节，欢迎大家提Issue反馈问题或建议。】
 
 好的教程可以一路运行。
-本课程由自塾团队与datawhale合作开发并在datawhale社区进行开源。我们要做一个能够一路拷贝代码运行的全栈开发教程。集成了许多优秀代码片段，在开发过程中可以随时复制。同时搭配了一个练手项目，一个用来做时间管理的项目。前端采用ts+vue3+vite架构，后端采用fastapi架构。开源项目和开源教程可以打配合。开源项目里用到的知识写入开源教程。开源教程所用到的例子来源于开源项目。互相印证。
+本课程由自塾团队与datawhale合作开发并在datawhale社区进行开源。我们要做一个能够一路拷贝代码运行的全栈开发教程。集成了许多优秀代码片段，在开发过程中可以随时复制。同时搭配了一个练手项目，一个用来做时间管理的项目。前端采用ts+vue3+vite架构，后端采用fastapi架构。开源项目和开源教程可以打配合。开源项目里用到的知识写入开源教程。开源教程所用到的例子来源于开源项目，互相印证。
 
 # 教程使用方法
 
@@ -91,6 +93,7 @@ Tutorial：[Hoshino-wind](https://github.com/Hoshino-wind)
 Docs：[Kailigithub](https://github.com/Kailigithub)  
 Backend：[Tom.Yang](https://github.com/7n8fail)[wu](https://github.com/AIzealotwu) 
 
+当前主要维护者[Kailigithub](https://github.com/Kailigithub)，现居成都，擅长网站前后端搭建及维护，参与self-llm贡献。
 
 ## 关注我们
 

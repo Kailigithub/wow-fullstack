@@ -1,4 +1,5 @@
 亲爱的朋友，欢迎来到FastAPI的学习园地！
+【🧪 Beta公测版本提示：教程主体已完成，正在优化细节，欢迎大家提Issue反馈问题或建议。】
 
 本教程面向有一些python基础的学员，而且是需要在本地电脑上运行的。这个教程既有markdown格式的文档，也有ipynb格式的文档。我们推荐的学习方式是看markdown格式的文档。自己在本地的电脑上新建jupyter notebook，把markdown里的代码片段复制到jupyter notebook的格子中，然后在里面运行代码。实在没有时间，想要快速运行完整个教程的代码的同学，可以直接下载ipynb格式的文档，然后在jupyter notebook中打开，然后运行所有的代码。
 

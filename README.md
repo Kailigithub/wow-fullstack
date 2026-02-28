@@ -47,6 +47,24 @@
 python需要的版本是3.10
 node需要的版本是v18.18.0
 npm需要的版本是10.2.5
+
+### 环境配置（重要！）
+**首次运行必须配置环境变量文件，否则项目无法启动！**
+
+#### 后端配置
+```bash
+cd tm-backend
+cp .env.example .env  # 复制环境变量模板
+```
+后端 `.env` 文件已经准备好，默认配置即可运行。如需修改邮件功能，请编辑 `.env` 中的 SMTP 配置。
+
+#### 前端配置
+```bash
+cd tm-frontend
+cp .env.example .env  # 复制环境变量模板
+```
+前端 `.env` 文件已经准备好，默认配置 `VITE_API_URL=http://127.0.0.1:8008` 指向本地后端。
+
 ### 安装后端依赖库
 进入`tm-backend`文件夹，确保`requirement.txt`文件是在的，然后
 `pip install -r requirement.txt`

@@ -1,11 +1,13 @@
 # tm-backend
 
+> ⚠️ **首次运行前必须执行：** `cp .env.example .env`（已自带默认配置）
+
 ## 部署方法
 
 ```bash
 cd tm-backend
 pip install -r requirements.txt
-uvicorn main:app --host 0.0.0.0 --port 8008 --evn-file .env
+uvicorn main:app --host 0.0.0.0 --port 8008 --env-file .env
 ```
 
 ### uv 部署

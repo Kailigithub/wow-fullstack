@@ -56,7 +56,17 @@ def check_jwt_token(token: Optional[str] = Header(""), db: Session = Depends(get
         # print(expiration_time)
         # 通过解析得到的username,获取用户信息,并返回
         # return users_db.get(username)
-        return db.query(users.Users).filter(users.Users.id== int(id)).first()
+        user = db.query(users.Users).filter(users.Users.id== int(id)).first()
+        if not user:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail={
+                    'code': 5001,
+                    'message': "User not found",
+                    'data': "User not found",
+                }
+            )
+        return user
     except (JWTError, ValidationError):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,

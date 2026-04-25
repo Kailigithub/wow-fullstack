@@ -6,7 +6,6 @@ logger = logging.getLogger(__name__)
 from app.dependencies import check_jwt_token, get_db, verify_password, get_password_hash, require_admin
 from app.config import settings
 from jose import jwt
-import requests
 import os
 import json
 import glob

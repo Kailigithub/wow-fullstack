@@ -67,7 +67,7 @@ def check_jwt_token(token: Optional[str] = Header(""), db: Session = Depends(get
                 }
             )
         return user
-    except (JWTError, ValidationError):
+    except (JWTError, ValidationError, ValueError, TypeError):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail={

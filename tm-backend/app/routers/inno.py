@@ -28,11 +28,23 @@ async def get_tm(user_id:int):
     if os.path.exists(f"static/tm/t{userid}.txt"):
         with open(f"static/tm/t{userid}.txt", "r", encoding="utf-8") as f:
             pr=f.readlines()
-    pr = [ast.literal_eval(x) for x in pr]
+    parsed_pr = []
+    for x in pr:
+        try:
+            parsed_pr.append(ast.literal_eval(x))
+        except (ValueError, SyntaxError):
+            continue
+    pr = parsed_pr
     if os.path.exists(f"static/tm/f{userid}.txt"):
         with open(f"static/tm/f{userid}.txt", "r", encoding="utf-8") as f:
             fn=f.readlines()
-    fn = [ast.literal_eval(x) for x in fn]
+    parsed_fn = []
+    for x in fn:
+        try:
+            parsed_fn.append(ast.literal_eval(x))
+        except (ValueError, SyntaxError):
+            continue
+    fn = parsed_fn
     fn.reverse()
     return {"pr":pr, "fn":fn}
 
@@ -43,7 +55,13 @@ async def get_pr(user_id:int):
     if os.path.exists(f"static/tm/t{userid}.txt"):
         with open(f"static/tm/t{userid}.txt", "r", encoding="utf-8") as f:
             pr=f.readlines()
-    pr = [ast.literal_eval(x) for x in pr]
+    parsed_pr = []
+    for x in pr:
+        try:
+            parsed_pr.append(ast.literal_eval(x))
+        except (ValueError, SyntaxError):
+            continue
+    pr = parsed_pr
     return pr
 
 @inno.put('/save_pr/{user_id}')
@@ -110,7 +128,11 @@ async def add_study_time(request: Request, user_id:int):
         existing_pr = []
         if os.path.exists(f"static/tm/t{userid}.txt"):
             with open(f"static/tm/t{userid}.txt", "r", encoding="utf-8") as f:
-                existing_pr = [ast.literal_eval(x) for x in f.readlines()]
+                for x in f.readlines():
+                    try:
+                        existing_pr.append(ast.literal_eval(x))
+                    except (ValueError, SyntaxError):
+                        continue
 
         # 追加新的学习记录
         for line in tasklist:
